@@ -1,2 +1,2 @@
 resources:
-- kafka.yaml
+- kafka-cr.yaml
