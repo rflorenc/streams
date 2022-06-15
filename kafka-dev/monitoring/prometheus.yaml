@@ -29,7 +29,7 @@ spec:
     metadata:
       labels:
         name: prometheus
-      serviceAccount: prometheus-server
+    serviceAccountName: prometheus-server
     spec:
       containers:
       - name: prometheus
