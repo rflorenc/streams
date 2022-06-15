@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: kafka-dev
+  namespace: kafka-dev
+spec:
+  destination:
+    namespace: kafka-dev
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    directory:
+      recurse: true
+    path: kafka-dev
+    repoURL: https://github.com/rflorenc/streams.git
+    targetRevision: develop
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
