@@ -1,2 +1,5 @@
 resources:
 - kafka-cr.yaml
+- monitoring/grafana.yaml
+- monitoring/prometheus.yaml
+
