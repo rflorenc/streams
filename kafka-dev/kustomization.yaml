@@ -1,3 +1,4 @@
 resources:
 - kafka-cr.yaml
 - kafka-podmonitors
+- kafka-base-topic.yaml
