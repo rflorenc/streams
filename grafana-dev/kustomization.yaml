@@ -1,0 +1,6 @@
+resources:
+- grafana-og.yaml
+- grafana-sub.yaml
+- grafana-cr.yaml
+- rbac/grafana-sa.yaml
+- rbac/grafana-crb.yaml
