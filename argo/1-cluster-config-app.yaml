@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: kafka-dev-app
+  name: cluster-config-app
   namespace: openshift-gitops
 spec:
   destination:
@@ -11,9 +11,9 @@ spec:
   source:
     directory:
       recurse: true
-    path: kafka-dev
+    path: cluster
     repoURL: https://github.com/rflorenc/streams.git
-    targetRevision: develop
+    targetRevision: ocp4.10
   syncPolicy:
     automated:
       prune: true

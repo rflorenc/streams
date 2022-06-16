@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: kafka-dev-app
+  namespace: openshift-gitops
+spec:
+  destination:
+    namespace: default
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    directory:
+      recurse: true
+    path: kafka-dev
+    repoURL: https://github.com/rflorenc/streams.git
+    targetRevision: ocp4.10
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
