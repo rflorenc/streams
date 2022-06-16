@@ -1,0 +1,7 @@
+apiVersion: v1
+data:
+  config.yaml: "enableUserWorkload: true \n"
+kind: ConfigMap
+metadata:
+  name: cluster-monitoring-config
+  namespace: openshift-monitoring
